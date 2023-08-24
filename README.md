@@ -22,5 +22,11 @@ after starting a task the start button will be disabled and will re enable once 
 
 once the task has ended, a list of all the tasks completed along with the total time will be displayed
 
+# Excel output
+
+![image](https://github.com/Hammad-DD/task-logger-application/assets/142394311/de4b9442-48da-4344-a19d-04ece7b1b74d)
+
+
 # Deleting the file
 once you're done logging to the current file just change the file directory or delete/rename the file
+
