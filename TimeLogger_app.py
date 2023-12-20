@@ -11,10 +11,10 @@ class TaskTrackerApp:
 
         self.root = tk.CTk()
         self.root.title("Task Tracker")
-        self.root.geometry('400x300')
+        self.root.geometry('300x200')
         try:
             tk.set_default_color_theme("stupid.json")
-            
+
         except FileNotFoundError:
             pass
 
@@ -45,6 +45,7 @@ class TaskTrackerApp:
         day_of_week = start_date.strftime('%A')
         self.task_data = (task_name, start_date, start_time, day_of_week)
         self.start_button.configure(state=tk.DISABLED)
+        self.task_name_entry.configure(state=tk.DISABLED)
         self.end_button.configure(state=tk.NORMAL)
         self.total_time_label.configure(
             text=f'Currently working on:\n {task_name}\n Started at: {start_date.strftime("%H:%M:%S")}')
@@ -61,6 +62,7 @@ class TaskTrackerApp:
                 messagebox.showinfo("Task Complete", "Task logged successfully!")
                 self.start_button.configure(state=tk.NORMAL)
                 self.end_button.configure(state=tk.DISABLED)
+                self.task_name_entry.configure(state=tk.NORMAL)
                 self.update_total_time()
                 self.update_task_names()
 
